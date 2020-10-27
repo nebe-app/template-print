@@ -1,9 +1,14 @@
-$marks: 0mm;
+$leftMarks: 0mm;
+$rightMarks: 0mm;
 $topMarks: 0mm;
-$width: 210mm + 2 * $marks;
-$height: 297mm + $topMarks + $marks;
+$bottomMarks: 0mm;
+
+// Rozměry tiskoviny bez ořezek (stejné jako název složky)
+$width: 210mm;
+$height: 297mm;
 
 @import '../assets/main';
+@import '../assets/fonts';
 
 article[data-slot="headline"] {
 	position: absolute;

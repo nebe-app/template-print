@@ -1,27 +1,19 @@
-$roundedWidth: floor($width * 10) / 10;
-$roundedHeight: floor($height * 10) / 10;
+/**
+ * Tento soubor není potřeba upravovat
+ */
+
+/**
+ * Základní tiskové styly
+ */
+$totalWidth: $width + $leftMarks + $rightMarks;
+$totalHeight: $height + $topMarks + $bottomMarks;
 
 @page {
 	margin: 0;
 	padding: 0;
-	size: $roundedWidth $roundedHeight;
+	size: $totalWidth $totalHeight;
 	marks: none;
 	bleed: 0;
-}
-
-@font-face {
-	font-family: DINProRegular;
-	src: url(https://cdn.nebe.app/demo/fonts/DINPro-Regular.ttf) format("truetype");
-}
-
-@font-face {
-	font-family: DINProBold;
-	src: url(https://cdn.nebe.app/demo/fonts/DINPro-Bold.ttf) format("truetype");
-}
-
-@font-face {
-	font-family: CallingCodeBold;
-	src: url(https://cdn.nebe.app/demo/fonts/callingcode-bold.otf) format("opentype");
 }
 
 html {
@@ -40,15 +32,26 @@ body, html {
 	-moz-osx-font-smoothing: grayscale
 }
 
+/**
+ * Hlavní oblast obsahující sloty
+ */
 main {
 	position: relative;
 	top: 0;
 	left: 0;
 	overflow: hidden;
-	width: $roundedWidth;
-	height: $roundedHeight;
+	font-family: Arial, sans-serif;
+	width: $totalWidth;
+	height: $totalHeight;
+
+	html.is-development & {
+		outline: 1px solid blue;
+	}
 }
 
+/**
+ * Netisknutelné elementy (pozadí/náhled)
+ */
 aside {
 	position: absolute;
 	top: 0;
@@ -57,8 +60,8 @@ aside {
 	height: 100%;
 
 	img {
-		width: $width;
-		height: $height;
+		width: $totalWidth;
+		height: $totalHeight;
 		display: block;
 		position: absolute;
 		top: 0;
@@ -74,8 +77,13 @@ aside {
 	}
 }
 
+/**
+ * Dynamický slot
+ */
 article {
+	position: absolute;
 	line-height: 1em;
+	white-space: nowrap;
 	color: #1A1919;
 
 	&.is-highlighted {
@@ -89,8 +97,18 @@ article {
 	}
 }
 
+/**
+ * Ořezová oblast
+ */
 .marks {
 	position: absolute;
 	top: $topMarks;
-	left: $marks;
+	left: $leftMarks;
+	width: $width;
+	height: $height;
+
+	html.is-development & {
+		outline: 1px solid green;
+		display: block !important;
+	}
 }
