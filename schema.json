@@ -1,0 +1,34 @@
+{
+	"price_old": {
+	  "label": "Old price",
+	  "value": "89",
+	  "prefill": true
+	},
+	"price": {
+		"label": "Price",
+		"value": "79",
+		"prefill": true
+	},
+	"discount": {
+		"label": "Discount",
+		"value": "20",
+		"prefill": true
+	},
+	"headline": {
+		"label": "Headline",
+		"value": "Kitty financial services"
+	},
+	"name": {
+		"label": "Name",
+		"value": "Maneki-neko cat"
+	},
+	"description": {
+	  "label": "Description",
+	  "value": "Dolor at venenatis convallis lorem curae id curae inceptos interdum sociosqu lobortis maecenas lobortis cras consectetur dictum mi nascetur nulla torquent integer fusce."
+	},
+	"image": {
+	  "label": "Product image",
+	  "value": "https://cdn.nebe.app/demo/products/cat.svg",
+	  "type": "image"
+	}
+}

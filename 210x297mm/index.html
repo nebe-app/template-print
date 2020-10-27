@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+	<title>N.E.B.E.</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="style.scss" type="text/css" media="screen">
+</head>
+<body>
+<main>
+	<!-- Tags <aside> will not get rendered -->
+	<!-- For development, toggle preview by pressing "d" -->
+	<aside class="background">
+		<img src="background.jpg" alt="">
+		<img src="preview.jpg" class="development" alt="">
+	</aside>
+
+	<div class="marks">
+		<!-- Slots -->
+		<article data-slot="headline" contenteditable="true">Kitty financial services</article>
+		<article data-slot="discount" contenteditable="true">20</article>
+		<article data-image-slot="image"><img src="../assets/product.svg" alt=""></article>
+		<article data-slot="name">Maneki-neko cat</article>
+		<article data-slot="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, ipsum!</article>
+	</div>
+
+	<div class="price-old-wrapper">
+		<img src="../assets/flag-blue.svg" class="ribbon" alt="">
+		<article data-slot="price_old" contenteditable="true">89</article>
+		<img src="../assets/line-blue.svg" class="line" alt="">
+	</div>
+
+	<div class="price-wrapper">
+		<img src="../assets/flag-orange.svg" class="ribbon" alt="">
+		<article data-slot="price" contenteditable="true">79</article>
+	</div>
+</main>
+<script src="https://cdn.nebe.app/store/utils/dist/fit.min.js"></script>
+<script src="../assets/scripts.js"></script>
+</body>
+</html>

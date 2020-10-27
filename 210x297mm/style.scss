@@ -1,0 +1,147 @@
+$marks: 0mm;
+$topMarks: 0mm;
+$width: 210mm + 2 * $marks;
+$height: 297mm + $topMarks + $marks;
+
+@import '../assets/main';
+
+article[data-slot="headline"] {
+	position: absolute;
+	width: 170mm;
+	height: 2.6em;
+	top: 23mm;
+	left: 20mm;
+	color: #22a875;
+	font-family: CallingCodeBold, sans-serif;
+	font-size: 54pt;
+	line-height: 52pt;
+	overflow: hidden;
+}
+
+article[data-slot="name"] {
+	position: absolute;
+	width: 107mm;
+	top: 223mm;
+	left: 14mm;
+	font-family: CallingCodeBold, sans-serif;
+	font-size: 21pt;
+	color: #4f46de;
+}
+
+article[data-slot="description"] {
+	position: absolute;
+	width: 107mm;
+	top: 235mm;
+	left: 14mm;
+	font-family: DINProRegular, sans-serif;
+	font-size: 11.4pt;
+	line-height: 19pt;
+	color: #1c0c3e;
+	overflow: hidden;
+	height: 6.7em;
+}
+
+article[data-slot="price_old"] {
+	position: relative;
+	color: #ffffff;
+	padding-left: 12mm;
+	font-family: DINProBold, sans-serif;
+	font-size: 20pt;
+	line-height: 1;
+	text-align: right;
+	white-space: nowrap;
+	overflow: hidden;
+
+	strong {
+		font-size: 37pt;
+	}
+}
+
+.price-old-wrapper {
+	position: absolute;
+	top: 208mm;
+	right: 2mm;
+	height: 16mm;
+	padding: 1.2mm 4mm 0 0;
+
+	img {
+		pointer-events: none;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: left center;
+	}
+}
+
+.price-wrapper {
+	position: absolute;
+	top: 224mm;
+	right: 2mm;
+	padding: 2.5mm 5mm;
+	height: 31mm;
+
+	img {
+		pointer-events: none;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: left center;
+	}
+}
+
+article[data-slot="price"] {
+	position: relative;
+	padding-left: 8mm;
+	color: #ffffff;
+	font-family: DINProBold, sans-serif;
+	font-size: 38pt;
+	line-height: 1;
+	text-align: right;
+	white-space: nowrap;
+	overflow: hidden;
+
+	strong {
+		font-size: 72pt;
+	}
+
+	small {
+		font-size: 20pt;
+	}
+}
+
+article[data-slot="discount"] {
+	position: absolute;
+	top: 80mm;
+	left: 150mm;
+	height: 39mm;
+	width: 45mm;
+	color: #FFFFFF;
+	font-family: DINProBold, sans-serif;
+	font-size: 59pt;
+	font-weight: bold;
+	text-align: center;
+	letter-spacing: -1mm;
+}
+
+article[data-image-slot="image"] {
+	position: absolute;
+	top: 70mm;
+	left: 30mm;
+	width: 145mm;
+	height: 145mm;
+	text-align: center;
+	vertical-align: center;
+
+	img {
+		object-fit: contain;
+		object-position: center center;
+		width: 100%;
+		height: 100%;
+	}
+}

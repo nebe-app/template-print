@@ -1,0 +1,8 @@
+{
+	"name": "Demo Print",
+	"format": "print",
+	"description": "Template for creating print campaigns",
+	"tags": [
+		"Demo"
+	]
+}
