@@ -81,11 +81,6 @@ aside {
  * Dynamický slot
  */
 article {
-	position: absolute;
-	line-height: 1em;
-	white-space: nowrap;
-	color: #1A1919;
-
 	&.is-highlighted {
 		background-color: rgba(75, 168, 46, .8);
 	}
