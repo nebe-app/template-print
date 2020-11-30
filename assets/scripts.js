@@ -53,8 +53,8 @@ window.FILL = async (inputs) => {
 	discountEl.textContent = `-${parseInt(discount).toLocaleString('cs')}`;
 
 	// Headline
-	window.FIT(document.querySelector('article[data-slot="headline"]'));
+	await window.FIT(document.querySelector('article[data-slot="headline"]'));
 
 	// Name
-	window.FIT(document.querySelector('article[data-slot="name"]'));
+	await window.FIT(document.querySelector('article[data-slot="name"]'));
 };
